@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Course Feedback</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>CSF3133 Course Feedback</h1>
+        </header>
+        <nav>
+            <a href="results.html">Feedback Summary</a> | 
+            <a href="feedback.html">Feedback Form</a> |
+            <a href="comment.html">Student Comments</a>
+        </nav>
+        <section id="results">
+            <h2>Feedback Summary</h2>
+            <table border="1">
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <th>Rating</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td colspan="2">Tables and Forms</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Semantic HTML</td>
+                    <td>4.7</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td rowspan="2">Mini Project</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Average Rating</th>
+                    <td>4.5</td>
+                </tr>
+            </table>
+        </section>
+            <section id="form">
+                <h2>Give Your Feedback</h2>
+                <form action="submit_feedback.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label>Overall rating:</label><br>
+                    <input type="radio" id="good" name="rating" value="Good">
+                    <label for="good">Good</label>
+                    <input type="radio" id="average" name="rating" value="Average">
+                    <label for="average">Average</label>
+                    <input type="radio" id="poor" name="rating" value="Poor">
+                    <label for="poor">Poor</label><br><br>
+                    <label>Topics I want more practice on:</label>
+                    <input type="checkbox" id="html" name="topics" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="checkbox" id="tables" name="topics" value="Tables and Forms">
+                    <label for="tables">Tables and Forms</label><br>
+                    <input type="checkbox" id="semantic" name="topics" value="Semantic HTML">
+                    <label for="semantic">Semantic HTML</label><br>
+                    <input type="checkbox" id="lab" name="lab" value="yes">
+                    <label for="lab">I attended all labs</label><br>
+                    
+                    <p>
+                        <label for="group">Group:</label>
+                        <select id="group" name="group">
+                            <option>Select your group:</option>
+                            <option value="k1">K1</option>
+                            <option value="k2">K2</option>
+                            <option value="k3">K3</option>
+                        </select><br>
+                    </p>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            
+            <!-- Student comments -->
+             <section id="comments">
+                <h2>Student Comments</h2>
+                <!-- Article: First student comment -->
+                <article>
+                    <h3>Student A</h3>
+                    <p>The HTML lessons helped me understand how to structure a web page.
+                    </p>
+                </article>
+                <article><h3>Student B</h3>
+                    <p>I would like more practice with tables, forms and semantic HTML.
+                    </p>
+                </article>
+            </section>
+            
+            <footer><br>
+                <p>Copyright &copy; 2026 CSF3133</p>
+            </footer>
+</body>
+</html>
