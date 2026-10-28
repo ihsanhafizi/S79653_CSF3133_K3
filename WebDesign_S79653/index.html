@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Web Design Portfolio</title>
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f5ef;
+            color: #45483f;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #a3b18a, #6b8063);
+            color: #fffdf7;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 6px 0;
+            color: #f5f3e9;
+        }
+
+        header h1::after {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 3px;
+            background: #e8dfc8;
+            margin: 15px auto 0;
+            border-radius: 10px;
+        }
+
+        /* Main Layout */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        /* Portfolio Cards */
+        section {
+            background-color: #fffdf8;
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid #e6e2d7;
+            box-shadow: 0 5px 18px rgba(83, 91, 69, 0.07);
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(83, 91, 69, 0.13);
+        }
+
+        /* Section Headings */
+        h2 {
+            color: #647653;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e6e8dc;
+        }
+
+        /* Exercise Links */
+        ol {
+            list-style: none;
+            counter-reset: exercise;
+        }
+
+        li {
+            counter-increment: exercise;
+            margin: 10px 0;
+        }
+
+        li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 13px;
+            background-color: #f4f3eb;
+            border: 1px solid #e6e5d9;
+            border-radius: 9px;
+            color: #53594a;
+            text-decoration: none;
+            transition: background-color 0.2s ease,
+                        color 0.2s ease,
+                        border-color 0.2s ease;
+        }
+
+        li a::before {
+            content: counter(exercise, decimal-leading-zero);
+            color: #788866;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        li a::after {
+            content: "↗";
+            margin-left: auto;
+            color: #9a9b87;
+        }
+
+        li a:hover {
+            background-color: #e8eddf;
+            color: #46573b;
+            border-color: #a3b18a;
+        }
+
+        li a:hover::after {
+            color: #647653;
+        }
+
+        li a:focus-visible {
+            outline: 2px solid #647653;
+            outline-offset: 3px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #41483b;
+            color: #eeede3;
+            padding: 25px 15px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 650px) {
+            header {
+                padding: 35px 15px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                margin: 25px auto;
+                padding: 0 15px;
+                gap: 18px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <h1>My Web Design Portfolio</h1>
+        <p><strong>Name:</strong> MUHAMMAD IHSAN HAFIZI BIN MOHD ZAHARI</p>
+        <p><strong>Matric Number:</strong> S79653</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Wonderbuuk Exercise 1 -->
+        <section>
+            <h2>Wonderbuuk Exercise 1</h2>
+
+            <ol>
+                <li>
+                    <a href="Lab1/index.html">
+                        Exercise 1
+                    </a>
+                </li>
+                <li>
+                    <a href="Lab1/labexercise.html">
+                        Lab Activity 1
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Lab 1 -->
+        <section>
+            <h2>Lab 1</h2>
+
+            <ol>
+                <li>
+                    <a href="Lab1 Exercise/lab1_ExerA.html">
+                        Lab 1 Exercise A
+                    </a>
+                </li>
+                <li>
+                    <a href="Lab1 Exercise/lab1_ExerB.html">
+                        Lab 1 Exercise B
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ihsanhafizi.github.io/S79653_CSF3133_K3/WebDesign_S79653/Lab1%20Exercise/LabReport1_CSF3133__S79653_HAFIZI.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Lab 1 Report
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Wonderbuuk Exercise 2 -->
+        <section>
+            <h2>Wonderbuuk Exercise 2</h2>
+
+            <ol>
+                <li>
+                    <a href="Lab2/index.html">
+                        Exercise 2
+                    </a>
+                </li>
+                <li>
+                    <a href="Lab2/labexercise.html">
+                        Lab Activity 2
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Lab 2 -->
+        <section>
+            <h2>Lab 2</h2>
+
+            <ol>
+                <li>
+                    <a href="Lab2 Exercise/lab2_ExerA.html">
+                        Lab 2 Exercise A
+                    </a>
+                </li>
+                <li>
+                    <a href="Lab2 Exercise/lab2_ExerB.html">
+                        Lab 2 Exercise B
+                    </a>
+                </li>
+                <li>
+                    <a href="Lab2 Exercise/lab2_ExerciseB_2.html">
+                        Lab 2 Exercise B Part 2
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ihsanhafizi.github.io/S79653_CSF3133_K3/WebDesign_S79653/Lab2%20Exercise/LabReport2_CSF3133__S79653_HAFIZI.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Lab 2 Report
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 | Student Portfolio - S79653</p>
+        <p>Web Design Coursework</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
