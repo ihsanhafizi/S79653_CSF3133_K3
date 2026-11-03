@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with Calculator</title>
+</head>
+<body>
+    <!-- Header section -->
+    <div id="header">
+        <h1>Welcome to My Website</h1>
+        <span>Your satisfaction is our priority!</span>
+    </div>
+
+    <!-- Content section-->
+    <div id="content">
+        <h2>Contact Form</h2>
+        <form action="">
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+            <br><br>
+            <label>Preferred Contact Date:</label>
+            <input type="date" name="date" required>
+            <br><br>
+            <label>Satisfaction Level:</label>
+            <input type="range" name="satisfaction" min="0" max="10" value="5">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+
+        <!-- Calculator section -->
+        <div id="calculator">
+            <h2>Simple Calculator</h2>
+            <form oninput="sum.value = Number(num1.value)
+            + Number(num2.value)">
+            <label>First Number:</label>
+            <input type="number" id="num1" 
+            placeholder="Enter first number">
+            <br><br>
+            <label>Second Number:</label>
+            <input type="number" id="num2" 
+            placeholder="Enter second number">
+            <br><br>
+            <label>Sum:</label>
+            <output name="sum" for="num1 num2">Result will appear here
+            </output>
+        </form>
+        </div>
+    </div><br><br>
+
+    <!-- Footer section-->
+    <div id="footer">
+        <p>Contact us: contact@example.com</p>
+        <p>Copyright &#169; 2026 Contact Us. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
