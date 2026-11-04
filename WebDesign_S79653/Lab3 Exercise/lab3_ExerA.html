@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bakery Online Order Page</title>
+</head>
+<body>
+    <!-- Header section -->
+    <div id="header">
+        <h1>CampusBake<span>&reg;</span></h1>
+        <p>Freshly Baked, Just For You!</p>
+    </div>
+
+    <!-- Navigation section -->
+    <div id="nav">
+        <a href="order.html">Order Now</a> |
+        <a href="pricelist.html">Price List</a>
+    </div>
+
+    <!-- Main Content section -->
+    <div id="content">
+        <h2>Welcome to CampusBake!</h2>
+        <!-- Intro using inline elements -->
+        <p>Welcome to <strong>CampusBake!</strong>We provide 
+        <em>fresh</em> and <em>delicious</em> bakery products for
+        students. <br>Our products are made by<span>high-quality ingredients.</span>
+        <a href="pricelist.html">View our price list here</a></p>
+    </div>
+
+    <!-- Sidebar section -->
+    <div id="sidebar">
+        <h2>Price List</h2>
+        <ul>
+            <li>Cupcake - RM 3.00</li>
+            <li>Cake Slice - RM 5.00</li>
+            <li>Chocolate Muffin - RM 4.00</li>
+            <li>Cookies - RM 2.00</li>
+        </ul>
+        <p>Orders &gt; 10 pieces get a free drink!</p>
+    </div><br>
+
+    <!-- Order Form section -->
+    <div id="order">
+        <h2>Place Your Order</h2>
+        <form action="order.html" method="post">
+            <!-- Customer information -->
+            <h3>Customer Information</h3>
+            <label>Customer name: </label>
+            <input type="text" name="custName"
+            placeholder="Enter your name"
+            autofocus>
+            <br><br>
+            <label>Phone number:</label>
+            <input type="tel" name="phoneNum" required>
+            <br><br>
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+            <br><br><br>
+
+            <!-- Pick-up details -->
+            <h3>Pick-up Details</h3>
+            <label>Pickup Date:</label>
+            <input type="date" name="date">
+            <br><br>
+            Pickup Time: <input type="time" name="pickupTime">
+            <br><br><br>
+
+            <!-- Product preferences -->
+            <h3>Product Preferences</h3>
+            <label>Flavour:</label>
+            <input list="flavours" id="flavour" name="flavour">
+                <datalist id="flavours">
+                    <option value="Chocolate"></option>
+                    <option value="Vanilla"></option>
+                    <option value="Strawberry"></option>
+                    <option value="Red Velvet"></option>
+                </datalist>
+                <br><br>
+            <label>Icing Colour:</label>
+            <input type="color" id="icing" name="icing">
+            <br><br>
+            <label>Sweetness:</label>
+            <input type="range" name="sweetness" min="1" max="5" step="1">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div><br><br>
+
+    <!-- Price calculator -->
+    <div id="pricecalc">
+        <h2>Price Calculator</h2>
+        <form oninput="total.value = (cupcakes.value * 3) + (cake.value * 5)">
+            <label>Cupcakes (RM3.00 each):</label>
+            <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+            <br><br>
+            <label>Cake Slices (RM5.00 each):</label>
+            <input type="number" id="cake" name="cake" min="0" value="0">
+            <br><br>
+            <h3>Order Total</h3>
+            <label>Total Price: RM</label>
+            <output name="total" for="cupcakes cake">0
+            </output>
+        </form>
+    </div><br><br>
+
+    <!-- Footer section -->
+    <div id="footer">
+        <p>Thank you for choosing CampusBake!</p>
+        <p>&copy; 2026 CampusBake&reg;. All rights reserved.</p>
+    </div>
+</body>
+</html>

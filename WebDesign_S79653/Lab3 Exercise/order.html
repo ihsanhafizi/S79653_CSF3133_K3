@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+</head>
+<body>
+    <nav>
+        <a href="lab3_ExerA.html">Home</a> |
+        <a href="pricelist.html">Price List</a>
+    </nav>
+
+    <!-- Order Form section -->
+    <div id="order">
+        <h1>Place Your Order</h1>
+        <form action="order.html" method="post">
+            <!-- Customer information -->
+            <h2>Customer Information</h2>
+            <label>Customer name: </label>
+            <input type="text" name="custName"
+            placeholder="Enter your name"
+            autofocus>
+            <br><br>
+            <label>Phone number:</label>
+            <input type="tel" name="phoneNum" required>
+            <br><br>
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+            <br><br><br>
+
+            <!-- Pick-up details -->
+            <h2>Pick-up Details</h2>
+            <label>Pickup Date:</label>
+            <input type="date" name="date">
+            <br><br>
+            Pickup Time: <input type="time" name="pickupTime">
+            <br><br><br>
+
+            <!-- Product preferences -->
+            <h2>Product Preferences</h2>
+            <label>Flavour:</label>
+            <input list="flavours" id="flavour" name="flavour">
+                <datalist id="flavours">
+                    <option value="Chocolate"></option>
+                    <option value="Vanilla"></option>
+                    <option value="Strawberry"></option>
+                    <option value="Red Velvet"></option>
+                </datalist>
+                <br><br>
+            <label>Icing Colour:</label>
+            <input type="color" id="icing" name="icing">
+            <br><br>
+            <label>Sweetness:</label>
+            <input type="range" name="sweetness" min="1" max="5" step="1">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div><br><br>
+
+    <!-- Price calculator -->
+    <div id="pricecalc">
+        <h2>Price Calculator</h2>
+        <form oninput="total.value = (cupcakes.value * 3) + (cake.value * 5)">
+            <label>Cupcakes (RM3.00 each):</label>
+            <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+            <br><br>
+            <label>Cake Slices (RM5.00 each):</label>
+            <input type="number" id="cake" name="cake" min="0" value="0">
+            <br><br>
+            <h3>Order Total</h3>
+            <label>Total Price: RM</label>
+            <output name="total" for="cupcakes cake">0
+            </output>
+        </form>
+    </div><br><br><br>
+
+    <!-- Footer section -->
+    <div id="footer">
+        <p>Thank you for choosing CampusBake!</p>
+        <p>&copy; 2026 CampusBake&reg;. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
