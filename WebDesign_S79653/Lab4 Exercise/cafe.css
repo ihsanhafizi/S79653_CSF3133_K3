@@ -1,0 +1,32 @@
+/* navigation bar */
+nav {
+    background-color: #E6D5C3;
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* display navigation links */
+nav li {
+    display: inline-block;
+}
+
+/* style navigation links */
+nav a {
+    display: block;
+    background-color: #795548;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* change background colour when hovering */
+nav a:hover {
+    background-color: #C28B61;
+    color: white;
+}
