@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Website</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.welcome {
+    text-align: center;
+    padding: 25px;
+    background-color: #E5D8C8;
+    color: #5C493A;
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>Welcome to My Personal Website</h1>
+    <p>Discover My Interests and Hobbies</p>
+</header>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<section id="home" class="welcome">
+    <h2>Hello and Welcome!</h2>
+    <p>Welcome to my personal website. Here, you can learn more about me, my interests and my hobbies.</p>
+</section>
+<section id="about">
+    <h2>About Me</h2>
+    <article>
+        <h3>Introduction</h3>
+        <p>Hello! I am a Year 2 Software Engineering student at Universiti Malaysia Terengganu (UMT). I enjoy learning new things, exploring technology and spending time on activities that interest me.</p>
+    </article>
+</section>
+<section id="video">
+    <h2>My Favourite Video</h2>
+    <figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Favourite Video" allowfullscreen></iframe>
+        <figcaption>A video that I enjoy watching.</figcaption>
+    </figure>
+</section>
+<section id="hobbies">
+    <h2>My Hobbies</h2>
+    <p>Here are some of my favourite activities:</p>
+    <ul>
+        <li>Listening to music</li>
+        <li>Watching movies</li>
+        <li>Playing games</li>
+        <li>Exploring new places</li>
+    </ul>
+</section>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <p>Favourite Hobby:</p>
+        <input type="checkbox" id="music" name="hobby" value="Music">
+        <label for="music">Listening to Music</label>
+        <input type="checkbox" id="movies" name="hobby" value="Movies">
+        <label for="movies">Watching Movies</label>
+        <input type="checkbox" id="games" name="hobby" value="Games">
+        <label for="games">Playing Games</label>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+<footer>
+    <p>&copy; 2026 My Personal Website. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
