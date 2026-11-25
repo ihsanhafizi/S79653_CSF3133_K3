@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #fff5f3;
+    color: #59443f;
+}
+/* header and panel */
+header, .panel {
+    max-width: 850px;
+    margin: 0 auto 16px;
+    padding: 18px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(90, 60, 50, 0.08);
+}
+header {
+    background: #b87979;
+    color: white;
+}
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* input */
+label {
+    margin-right: 8px;
+}
+input {    
+    padding: 9px;
+    margin: 6px;
+    border: 1px solid #e5c9c3;
+    border-radius: 5px;
+}
+
+/* button */
+button {
+    padding: 10px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #b87979;
+    color: white;
+    cursor: pointer;
+}
+
+/* button hover */
+button:hover {
+    background: #80564e;
+}
+.choices {
+    margin-bottom: 15px;
+}
+
+.versus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    text-align: center;
+}
+.versus img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 1px solid #ead5d0;
+    border-radius: 8px;
+    background: #fff9f7;
+}
+
+.scoreboard {
+    padding: 10px;    
+    background: #f8e9e5;
+    border-radius: 5px;
+}
+
+#result {
+    font-weight: bold;
+    min-height: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #e5c9c3;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background: #80564e;
+    color: white;
+}
+
+/* action buttons */
+.actions {
+    margin-top: 12px;
+}
+
+/* footer */
+footer {
+    text-align: center;    
+    color: #947b73;
+    font-size: 13px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grade Calculator</title>
+</head>
+<body>
+
+    <!-- 
+    Error 1 (grade.html, Line 9): onsubmit did not return the function result
+    Fixed with onsubmit="return checkMark()"
+    Error 2 (grade.html, Line 17): showtable() used incorrect capitalisation
+    Fixed to showTable()
+    Error 3 (grade.js, Line 5): name = "" was an assignment instead of comparison
+    Fixed to name === ""
+    Error 4 (grade.js, Line 9): isNan() had incorrect capitalisation
+    Fixed to isNaN()
+    Error 5 (grade.js, Line 14): mark < 0 && mark > 100 can never be true
+    Fixed to mark < 0 || mark > 100
+    Error 6 (grade.js, Line 28): getElementByID() used incorrect capitalisation
+    Fixed to getElementById()
+    Error 7 (grade.js, Line 30): style.colour is incorrect
+    Fixed to style.color
+    Error 8 (grade.js, Line 38): The loop started at 1, so grade A was skipped
+    Fixed to i = 0
+    Error 9 (grade.js, Line 42): innerHtml used incorrect capitalisation
+    Fixed to innerHTML
+    Error 10 (grade.js): return true allowed the form to submit and refresh the page
+    Fixed to return false to keep the result displayed
+    Error 11 (grade.html): The JavaScript filename grades.js did not match the actual filename
+    Fixed to src="grade.js"
+    -->
+
+    <h2>Student Grade Calculator</h2>
+    <form name="gradeForm" onsubmit="return checkMark()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="mark">Mark (0-100):</label>
+        <input type="text" id="mark" name="mark"><br><br>
+        <button type="submit">Check Grade</button>
+    </form>
+    <p id="result"></p>
+    <button onclick="showTable()">Show Grade Table</button>
+    <div id="tableContainer"></div>
+    <script src="grade.js"></script>
+</body>
+</html>

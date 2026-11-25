@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- game header -->
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Enter your name, start the game, then choose Rock, Paper or Scissors.</p>
+        <p id="welcome"></p>
+    </header>
+    <main>
+        <section class="panel">
+            <label for="playerName">Your name:</label>
+            <input type="text" id="playerName" placeholder="Enter your name">
+            <button type="button" onclick="startGame()">Start Game</button>
+        </section>
+
+        <!-- game choices and image -->
+        <section class="panel">
+            <h2>Make your choice</h2>
+            <div class="choices">
+                <button type="button" onclick="playRound('rock')">Rock</button>
+                <button type="button" onclick="playRound('paper')">Paper</button>
+                <button type="button" onclick="playRound('scissors')">Scissors</button>
+            </div>
+
+            <div class="versus">
+                <div>
+                    <h3>You</h3>
+                    <img id="playerImg" src="rock.png" alt="Your choice: rock">
+                </div>
+
+                <strong>VS</strong>
+
+                <div>
+                    <h3>Computer</h3>
+                    <img id="computerImg" src="rock.png" alt="Computer choice: rock">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- result -->
+        <section class="panel">
+            <h2>Result</h2>
+            <p id="result">Start the game to play.</p>
+            <div class="scoreboard">
+                Wins: <span id="wins">0</span>
+                Losses: <span id="losses">0</span>
+                Draws: <span id="draws">0</span>
+            </div>
+
+            <p id="summary"></p>
+        </section>
+        <!-- history table -->
+        <section class="panel">
+            <h2>History</h2>
+            <table id="history">
+                <thead>
+                    <tr>
+                        <th>Round</th>
+                        <th>You</th>
+                        <th>Computer</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+
+                <tbody id="historyBody"></tbody>
+            </table>
+
+            <div class="actions">
+                <button type="button" onclick="showSummary()">Show Summary</button>
+                <button type="button" onclick="resetGame()">Reset</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p id="startTime"></p>
+        <p>&copy; 2026 Computer Science Club</p>
+    </footer>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
