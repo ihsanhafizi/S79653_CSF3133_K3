@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>JavaScript Quiz</h1>
+        <p id="timer">Time: 15s</p>
+
+        <div id="quiz">
+            <h2 id="question">Question will appear here</h2>
+            <div id="options"></div>
+            <p id="feedback"></p>
+            <button id="nextBtn" onclick="nextQuestion()" disabled>
+                Next Question
+            </button>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Quiz Finished!</h2>
+            <p id="score"></p>
+            <button onclick="startQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
